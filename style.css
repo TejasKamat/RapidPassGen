@@ -83,6 +83,7 @@ p {
 }
 .hidden {
     display: none;
+    font-size: smaller;
 }
 
 @media (max-width: 1200px) {
@@ -110,7 +111,7 @@ p {
     }
     .innerpass,
     #gen {
-        font-size: small;
+        font-size: smaller;
     }
     .buttons {
         margin-right:10px;
