@@ -14,7 +14,7 @@ p {
     margin: 0px;
 }
 .mainn {
-    height: 87vh;
+    height: 650px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -47,7 +47,7 @@ p {
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
+    margin-right: 45px;
 }
 .copy {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
