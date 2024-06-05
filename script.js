@@ -95,7 +95,7 @@ gen.addEventListener("click", () => {
     } else if (selectedValue == "funny") {
         innerpass.innerHTML = copyText = genPass.funny()
     } else {
-        innerpass.innerHTML = `Error: Please select desired password type`
+        innerpass.textContent = `Error: Please select desired password type`
     }
 })
 
