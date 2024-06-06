@@ -8,6 +8,8 @@ const special = ["@", "#", "$", "%", "&",]
 
 const funnyArr = ["password", "incorrect", "hacker", "yourname", "correct", "betterluck", "funnyPassword"]
 
+let selectedValue = copyText = "";
+const radioButtons = document.querySelectorAll('input[name="vbtn-radio"]');
 
 class PassGenerator {
     weak() {
@@ -15,7 +17,6 @@ class PassGenerator {
             if (weakPass.length >= 8) {
                 break
             }
-            console.log("less then 9")
             weakPass += lower[Math.floor(Math.random() * lower.length)];
             if (weakPass.length >= 8) {
                 break
@@ -72,30 +73,28 @@ class PassGenerator {
     }
 }
 
-let selectedValue = "";
-const radioButtons = document.querySelectorAll('input[name="vbtn-radio"]');
-let copyText = ""
 radioButtons.forEach(radio => {
     radio.addEventListener('click', (event) => {
         selectedValue = event.target.value;
     });
 });
-innerpass = document.getElementById("innerpass")
+
+generatedpass = document.getElementById("generatedpass")
 genPass = new PassGenerator()
-gen.addEventListener("click", () => {
+
+genbutton.addEventListener("click", () => {
     weakPass = strongPass = superPass = funnyPass = "";
 
     if (selectedValue == "weak") {
-        innerpass.innerHTML = copyText = genPass.weak()
+        generatedpass.textContent = copyText = genPass.weak()
     } else if (selectedValue == "strong") {
-        innerpass.innerHTML = copyText = genPass.strong()
+        generatedpass.textContent = copyText = genPass.strong()
     } else if (selectedValue == "super") {
-
-        innerpass.innerHTML = copyText = genPass.super()
+        generatedpass.textContent = copyText = genPass.super()
     } else if (selectedValue == "funny") {
-        innerpass.innerHTML = copyText = genPass.funny()
+        generatedpass.textContent = copyText = genPass.funny()
     } else {
-        innerpass.textContent = `Error: Please select desired password type`
+        generatedpass.textContent = `Error: Please select desired password type`
     }
 })
 

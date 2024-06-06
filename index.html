@@ -17,12 +17,12 @@
     </nav>
 
     <div class="mainn">
-        <div class="outerbox">
+        <div class="box">
             <div class="form-floating">
-                <div id="generatedpass" class="generatedpass">
-                    <p id="innerpass" class="innerpass">Generate To Show Password</p>
+                <div id="passbox" class="passbox">
+                    <p id="generatedpass" class="generatedpass">Generate To Show Password</p>
                 </div>
-                <button type="button" id="gen" class="btn btn-outline-success">Generate</button>
+                <button type="button" id="genbutton" class="btn btn-outline-success">Generate</button>
             </div>
             <div class="buttons">
                 <div style="display: flex;" class="btn-group-horizontal radios-tune" role="group"
@@ -39,15 +39,12 @@
                     <input type="radio" class="btn-check" name="vbtn-radio" value="funny" id="vbtn-radio4"
                         autocomplete="off">
                     <label class="btn btn-outline-info" for="vbtn-radio4">Funny Password</label>
-
                 </div>
                 <div>
                     <button class="btn btn-outline-success copy" onclick="copyToClipboard()">Copy To ClipBoard</button>
                     <div id="message" class="alert alert-primary hidden" role="alert"></div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <div class="footer">
@@ -64,7 +61,6 @@
                 <small style="display: block; padding-bottom: 10px;">This website is made for learning purpose. Use at
                     your own risk.</small>
                 <a href="https://github.com/TejasKamat/RapidPassGen" class="btn btn-light">Source (Github)</a>
-
             </div>
         </div>
     </div>
